@@ -26,7 +26,7 @@ def go(args):
     # YOUR CODE HERE     #
     ######################
     logger.info("Downloading Artifact")
-    artifact_local_path = run.use_artifact(args.input_artifact).file()
+    artifact_path = run.use_artifact(args.input_artifact).file()
     df = pd.read_csv(artifact_path)
     
     # Drop outliers
